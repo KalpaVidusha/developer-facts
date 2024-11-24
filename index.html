@@ -5,36 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun Facts About Developers</title>
     <style>
+        :root {
+            --primary-color: #007bff;
+            --primary-hover-color: #0056b3;
+            --background-color: #f4f4f9;
+            --text-color: #333;
+            --container-bg-color: #fff;
+            --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            transition: background-color 0.3s, color 0.3s;
         }
+
         .container {
             text-align: center;
             max-width: 600px;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: var(--container-bg-color);
+            box-shadow: var(--box-shadow);
             border-radius: 8px;
+            transition: box-shadow 0.3s;
         }
+
         button {
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            background-color: #007bff;
+            background-color: var(--primary-color);
             color: #fff;
             border: none;
             border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
         }
+
         button:hover {
-            background-color: #0056b3;
+            background-color: var(--primary-hover-color);
+            transform: translateY(-2px);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background-color: #333;
+                --text-color: #f4f4f9;
+                --container-bg-color: #444;
+                --box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            }
         }
     </style>
 </head>
